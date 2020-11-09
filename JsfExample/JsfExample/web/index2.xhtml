@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <p:panel header="Formulario Persona">
+                <snap>
+                    <h:outputLabel for="id">
+                    Clave
+                    </h:outputLabel>  
+                    <h:inputText id="id" value="#{beanPersona.persona.id}"/>
+                </snap>
+                <br></br>
+                <snap>
+                    <h:outputLabel for="nombre">
+                    Nombre
+                    </h:outputLabel>  
+                    <h:inputText id="nombre" value="#{beanPersona.persona.nombre}"/>
+                </snap>
+                <br></br>
+                <snap>
+                    <h:outputLabel for="direccion">
+                    Dirección
+                    </h:outputLabel>  
+                    <h:inputText id="direccion" value="#{beanPersona.persona.direccion}"/>
+                </snap>
+                <br></br>
+                <h:commandButton 
+                value="Guardar"
+                action="#{beanPersona.saveData()}" 
+                style="width: 80px;">
+                </h:commandButton>
+                <h:commandButton 
+                value="Eliminar"
+                action="#{beanPersona.deleteRecord()}" 
+                style="width: 80px;">
+                </h:commandButton>
+                <h:commandButton 
+                value="Actualizar"
+                action="#{beanPersona.updateRecord()}" 
+                style="width: 80px;">
+                </h:commandButton>
+            </p:panel>
+            
+        </h:form>
+    </h:body>
+</html>
+
